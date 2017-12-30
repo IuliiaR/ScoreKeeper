@@ -2,8 +2,6 @@
 
 This is a practice app for [Google Developer Challenge Scholarship: Android Basics](https://www.udacity.com/google-scholarships). 
 
-![ScoreKeeper App Screenshot](https://github.com/IuliiaR/ScoreKeeper/blob/master/app/src/main/res/drawable/Screenshot_2017-12-30-22-46-14-704_com.example.android.scorekeeper.png)
-
 ### Working Files Are:
 * [MainActivity.java]
 * [colors.xml]
