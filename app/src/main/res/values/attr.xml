@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="teamNameTextSize" format="string"/>
+    <attr name="teamNameTextColor" format="string"/>
+    <attr name="teamNameTextFontFamily" format="string"/>
+    <attr name="scoreTextSize" format="string"/>
+    <attr name="scoreTextColor" format="string"/>
+    <attr name="scoreTextFontFamily" format="string"/>
+</resources>

@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/background"
+        style="@style/bg_img"
+        android:src="@drawable/background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logo"
+            style="@style/logo_img"
+            android:src="@drawable/hogwarts_icon" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <LinearLayout style="@style/team_layout">
+
+                <TextView
+                    style="@style/team_title"
+                    android:text="@string/gryffindor" />
+
+                <TextView
+                    android:id="@+id/gryffindor_score"
+                    style="@style/team_score"
+                    android:text="@string/initial_score" />
+
+                <Button
+                    android:id="@+id/tenPointsToGryggindor"
+                    style="@style/score_button"
+                    android:onClick="addTenPointsToGryffindor"
+                    android:text="@string/quaffle" />
+
+                <Button
+                    android:id="@+id/snitchGryffindor"
+                    style="@style/score_button"
+                    android:onClick="addSnitchPointsToGryggindor"
+                    android:text="@string/snitch" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/team_layout">
+
+                <TextView
+                    style="@style/team_title"
+                    android:text="@string/slytherin" />
+
+                <TextView
+                    android:id="@+id/slytherin_score"
+                    style="@style/team_score"
+                    android:text="@string/initial_score" />
+
+                <Button
+                    android:id="@+id/tenPointsToSlytherin"
+                    style="@style/score_button"
+                    android:onClick="addTenPointsToSlytherin"
+                    android:text="@string/quaffle" />
+
+                <Button
+                    android:id="@+id/snitchSlytherin"
+                    style="@style/score_button"
+                    android:onClick="addSnitchPointsToSlytherin"
+                    android:text="@string/snitch" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/reset"
+            style="@style/reset_button"
+            android:onClick="resetAllScores"
+            android:text="@string/reset" />
+    </LinearLayout>
+</RelativeLayout>
