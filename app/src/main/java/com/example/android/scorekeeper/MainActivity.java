@@ -18,53 +18,53 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the given score for Team A.
+     * Displays the given score for Gryffindor.
      */
-    public void displayForTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.gryffindor_score);
+    public void displayForGryffindor(int score) {
+        TextView scoreView = findViewById(R.id.gryffindor_score);
         scoreView.setText(String.valueOf(score));
     }
 
     /**
-     * This method is called when the free throw button is clicked.
+     * This method is called when the quaffle ball is caught.
      */
     public void addTenPointsToGryffindor(View view) {
         scoreGriffindor = scoreGriffindor + 10;
-        displayForTeamA(scoreGriffindor);
+        displayForGryffindor(scoreGriffindor);
     }
 
     /**
-     * This method is called when the 3 point button is clicked.
+     * This method is called when the snitch is caught.
      */
     public void addSnitchPointsToGryggindor(View view) {
         scoreGriffindor = scoreGriffindor + 150;
-        displayForTeamA(scoreGriffindor);
+        displayForGryffindor(scoreGriffindor);
         changeBackgroundImages(R.drawable.gryffindor_back, R.drawable.gryffindor);
         setButtonsVisibility(View.INVISIBLE);
     }
 
     /**
-     * Displays the given score for Team B.
+     * Displays the given score for Slytherin.
      */
-    public void displayForTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.slytherin_score);
+    public void displayForSlytherin(int score) {
+        TextView scoreView = findViewById(R.id.slytherin_score);
         scoreView.setText(String.valueOf(score));
     }
 
     /**
-     * This method is called when the free throw button is clicked.
+     * This method is called when the quaffle ball is caught.
      */
     public void addTenPointsToSlytherin(View view) {
         scoreSlytherin = scoreSlytherin + 10;
-        displayForTeamB(scoreSlytherin);
+        displayForSlytherin(scoreSlytherin);
     }
 
     /**
-     * This method is called when the 3 point button is clicked.
+     * This method is called when the snitch is caught.
      */
     public void addSnitchPointsToSlytherin(View view) {
         scoreSlytherin = scoreSlytherin + 150;
-        displayForTeamB(scoreSlytherin);
+        displayForSlytherin(scoreSlytherin);
         changeBackgroundImages(R.drawable.slytherin_back, R.drawable.slytherin);
         setButtonsVisibility(View.INVISIBLE);
     }
@@ -72,22 +72,29 @@ public class MainActivity extends AppCompatActivity {
     public void resetAllScores(View view) {
         scoreGriffindor = 0;
         scoreSlytherin = 0;
-        displayForTeamA(scoreGriffindor);
-        displayForTeamB(scoreSlytherin);
+        displayForGryffindor(scoreGriffindor);
+        displayForSlytherin(scoreSlytherin);
         changeBackgroundImages(R.drawable.background, R.drawable.hogwarts_icon);
         setButtonsVisibility(View.VISIBLE);
     }
 
-    private void changeBackgroundImages(int bgId, int logoId)
-    {
-        ImageView background = (ImageView) findViewById(R.id.background);
+    /**
+     * This method is called to change background image and logo when game finished
+     * @param bgId Background image Id
+     * @param logoId Logo image Id
+     */
+    private void changeBackgroundImages(int bgId, int logoId) {
+        ImageView background = findViewById(R.id.background);
         background.setImageResource(bgId);
-        ImageView logo = (ImageView) findViewById(R.id.logo);
+        ImageView logo = findViewById(R.id.logo);
         logo.setImageResource(logoId);
     }
 
-    private void setButtonsVisibility(int visibility)
-    {
+    /**
+     * This method is called to change score buttons visibility
+     * @param visibility New value of button visibility
+     */
+    private void setButtonsVisibility(int visibility) {
         findViewById(R.id.tenPointsToGryggindor).setVisibility(visibility);
         findViewById(R.id.tenPointsToSlytherin).setVisibility(visibility);
         findViewById(R.id.snitchGryffindor).setVisibility(visibility);

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_logo_margin">16dp</dimen>
+    <dimen name="layout_team_padding">16dp</dimen>
+    <dimen name="layout_score_marginBottom">24dp</dimen>
+    <dimen name="score_buttons_marginBottom">8dp</dimen>
+    <dimen name="reset_button_marginBottom">16dp</dimen>
+
+    <dimen name="team_title_text_size">18sp</dimen>
+    <dimen name="team_score_text_size">56sp</dimen>
+</resources>

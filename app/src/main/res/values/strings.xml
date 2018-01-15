@@ -6,4 +6,7 @@
     <string name="quaffle">Quaffle</string>
     <string name="snitch">Snitch</string>
     <string name="reset">Reset</string>
+
+    <string name="logo_image">Logo image</string>
+    <string name="background_image">Background image</string>
 </resources>

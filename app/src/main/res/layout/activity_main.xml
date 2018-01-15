@@ -1,82 +1,89 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/background"
         style="@style/bg_img"
-        android:src="@drawable/background" />
+        android:src="@drawable/background"
+        android:contentDescription="@string/background_image" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/logo"
-            style="@style/logo_img"
-            android:src="@drawable/hogwarts_icon" />
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <LinearLayout style="@style/team_layout">
+            <ImageView
+                android:id="@+id/logo"
+                style="@style/logo_img"
+                android:src="@drawable/hogwarts_icon"
+                android:contentDescription="@string/logo_image" />
 
-                <TextView
-                    style="@style/team_title"
-                    android:text="@string/gryffindor" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/gryffindor_score"
-                    style="@style/team_score"
-                    android:text="@string/initial_score" />
+                <LinearLayout style="@style/team_layout">
 
-                <Button
-                    android:id="@+id/tenPointsToGryggindor"
-                    style="@style/score_button"
-                    android:onClick="addTenPointsToGryffindor"
-                    android:text="@string/quaffle" />
+                    <TextView
+                        style="@style/team_title"
+                        android:text="@string/gryffindor" />
 
-                <Button
-                    android:id="@+id/snitchGryffindor"
-                    style="@style/score_button"
-                    android:onClick="addSnitchPointsToGryggindor"
-                    android:text="@string/snitch" />
+                    <TextView
+                        android:id="@+id/gryffindor_score"
+                        style="@style/team_score"
+                        android:text="@string/initial_score" />
+
+                    <Button
+                        android:id="@+id/tenPointsToGryggindor"
+                        style="@style/score_button"
+                        android:onClick="addTenPointsToGryffindor"
+                        android:text="@string/quaffle" />
+
+                    <Button
+                        android:id="@+id/snitchGryffindor"
+                        style="@style/score_button"
+                        android:onClick="addSnitchPointsToGryggindor"
+                        android:text="@string/snitch" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/team_layout">
+
+                    <TextView
+                        style="@style/team_title"
+                        android:text="@string/slytherin" />
+
+                    <TextView
+                        android:id="@+id/slytherin_score"
+                        style="@style/team_score"
+                        android:text="@string/initial_score" />
+
+                    <Button
+                        android:id="@+id/tenPointsToSlytherin"
+                        style="@style/score_button"
+                        android:onClick="addTenPointsToSlytherin"
+                        android:text="@string/quaffle" />
+
+                    <Button
+                        android:id="@+id/snitchSlytherin"
+                        style="@style/score_button"
+                        android:onClick="addSnitchPointsToSlytherin"
+                        android:text="@string/snitch" />
+                </LinearLayout>
             </LinearLayout>
 
-            <LinearLayout style="@style/team_layout">
-
-                <TextView
-                    style="@style/team_title"
-                    android:text="@string/slytherin" />
-
-                <TextView
-                    android:id="@+id/slytherin_score"
-                    style="@style/team_score"
-                    android:text="@string/initial_score" />
-
-                <Button
-                    android:id="@+id/tenPointsToSlytherin"
-                    style="@style/score_button"
-                    android:onClick="addTenPointsToSlytherin"
-                    android:text="@string/quaffle" />
-
-                <Button
-                    android:id="@+id/snitchSlytherin"
-                    style="@style/score_button"
-                    android:onClick="addSnitchPointsToSlytherin"
-                    android:text="@string/snitch" />
-            </LinearLayout>
+            <Button
+                android:id="@+id/reset"
+                style="@style/reset_button"
+                android:onClick="resetAllScores"
+                android:text="@string/reset" />
         </LinearLayout>
-
-        <Button
-            android:id="@+id/reset"
-            style="@style/reset_button"
-            android:onClick="resetAllScores"
-            android:text="@string/reset" />
-    </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
+
