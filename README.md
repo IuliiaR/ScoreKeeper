@@ -1,11 +1,13 @@
 # ScoreKeeper
 
-This is a practice app for [Google Developer Challenge Scholarship: Android Basics](https://www.udacity.com/google-scholarships). 
+This is a practice app for [Google Developer Challenge Scholarship: Android Basics](https://www.udacity.com/google-scholarships).
+
 
 ### Working Files Are:
 * [MainActivity.java]
 * [colors.xml]
 * [strings.xml]
+* [dimens.xml]
 * [styles.xml]
 * [AndroidManifest.xml]
 
